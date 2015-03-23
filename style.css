@@ -1,0 +1,36 @@
+#map-canvas{
+  position: absolute;
+  text-align: center;
+  top: 5%;
+  right: 30%;
+  width: 50%;
+  height: 80%;
+  border: 1px solid red;
+
+}
+#dataGamma{
+	position: absolute;
+  text-align: center;
+  top: 5%;
+  right: 5%;
+  width: 200px;
+  height: 200px;
+  border: 1px solid red;
+  border-radius: 100px;
+  transform: rotate(0deg);
+/*    -webkit-transform: rotate(-90deg); 
+    -moz-transform: rotate(-90deg);*/
+}
+#dataBeta{
+  position: absolute;
+  text-align: center;
+  top: 45%;
+  right: 5%;
+  width: 200px;
+  height: 200px;
+  border: 1px solid red;
+  border-radius: 100px;
+  transform: rotate(0deg);
+/*    -webkit-transform: rotate(-90deg); 
+    -moz-transform: rotate(-90deg);*/
+}
