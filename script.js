@@ -1,5 +1,35 @@
 var backgroundColor = '#B3E5FC'
 
+
+
+
+var canvas = document.getElementById("myCanvas");
+canvas.width  = window.innerWidth;
+canvas.height = window.innerHeight;
+
+var backgroundColor = '#B3E5FC'
+
+var context = canvas.getContext('2d');
+var radius = canvas.width/4;
+var circleSize = canvas.width/6;
+
+var ballColour = '#9575CD';
+
+var centerX = canvas.width / 2;
+var centerY = canvas.height / 2;
+
+var lowerTextArea = canvas.height/20 * 18;
+
+//touch target size
+var targetSize = canvas.width/15;
+
+var fontSizeText = Math.floor(canvas.width / 15);
+var fontStyleText = fontSizeText.toString() + "px Arial";
+
+var currentTime;
+
+
+
 init();
 
 function init() {
@@ -36,33 +66,6 @@ function init() {
     }, false);
   }
 }   
-
-
-
-var canvas = document.getElementById("myCanvas");
-canvas.width  = window.innerWidth;
-canvas.height = window.innerHeight;
-
-var backgroundColor = '#B3E5FC'
-
-var context = canvas.getContext('2d');
-var radius = canvas.width/4;
-var circleSize = canvas.width/6;
-
-var ballColour = '#9575CD';
-
-var centerX = canvas.width / 2;
-var centerY = canvas.height / 2;
-
-var lowerTextArea = canvas.height/20 * 18;
-
-//touch target size
-var targetSize = canvas.width/15;
-
-var fontSizeText = Math.floor(canvas.width / 15);
-var fontStyleText = fontSizeText.toString() + "px Arial";
-
-var currentTime;
 
 initmap();
 
