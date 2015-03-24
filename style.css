@@ -1,9 +1,13 @@
+#map-canvas, #dataGamma, #dataBeta{
+  margin: 0px;
+  padding: 0px;
+}
 #map-canvas{
   position: absolute;
   text-align: center;
   top: 5%;
   right: 30%;
-  width: 50%;
+  width: 65%;
   height: 80%;
   border: 1px solid red;
 
@@ -24,7 +28,7 @@
 #dataBeta{
   position: absolute;
   text-align: center;
-  top: 45%;
+  bottom: 15%;
   right: 5%;
   width: 200px;
   height: 200px;

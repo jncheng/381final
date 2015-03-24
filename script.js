@@ -18,8 +18,8 @@ function init() {
       if(alpha!=null || beta!=null || gamma!=null) {
         
 
-        dataGamma.innerHTML = 'gamma: ' + gamma;
-        dataBeta.innerHTML = 'beta: ' + beta;
+        dataGamma.innerHTML = 'Pitch: ' + gamma;
+        dataBeta.innerHTML = 'Camber: ' + beta;
 
 
       }
