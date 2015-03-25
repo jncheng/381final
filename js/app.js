@@ -203,7 +203,7 @@ var PageHomeContent = React.createClass({
     return React.DOM.div({id:'body-div'},null,
       React.DOM.div({id:'homeHeader'}, null,
 
-        React.DOM.h1(null, 'Trackr')
+        React.DOM.h1(null, 'Hill Trackr')
       ),
 
       
