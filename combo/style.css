@@ -17,7 +17,7 @@ h1{
 #map-canvas{
   position: absolute;
   text-align: center;
-  top: 14%;
+  top: 24%;
   right: 30%;
   width: 65%;
   height: 60%;
@@ -27,7 +27,7 @@ h1{
 #dataGamma{
 	position: absolute;
   text-align: center;
-  top: 14%;
+  top: 15%;
   right: 5%;
   width: 20vw;
   height: 20vw;
@@ -52,7 +52,7 @@ h1{
 }
 #speed{
   position: absolute;
-  top:80%;
+  top:15%;
   left: 5%;
   width: 15%;
 
@@ -60,14 +60,14 @@ h1{
 
 #altitude{
   position: absolute;
-  top:80%;
+  top:15%;
   left: 30%;
 
 
 }
 #direction{
   position: absolute;
-  top: 80%;
+  top: 15%;
   left: 60%;
 
 
