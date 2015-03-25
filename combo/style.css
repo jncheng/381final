@@ -1,3 +1,15 @@
+h1{
+  font-weight: bold;
+  background-color: #42A5F5;
+  color: black;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  text-align: center;
+  font-size: 1.5em;
+  margin:0%;
+  text-shadow: none;
+}
+
 #map-canvas, #dataGamma, #dataBeta, p{
   margin: 0px;
   padding: 0px;
@@ -5,22 +17,22 @@
 #map-canvas{
   position: absolute;
   text-align: center;
-  top: 5%;
+  top: 14%;
   right: 30%;
   width: 65%;
-  height: 80%;
-  border: 1px solid red;
+  height: 60%;
+  border: 1px solid black;
 
 }
 #dataGamma{
 	position: absolute;
   text-align: center;
-  top: 5%;
+  top: 14%;
   right: 5%;
   width: 20vw;
   height: 20vw;
-  border: 1px solid red;
-  border-radius: 100px;
+  border: 1px solid black;
+  border-radius: 10vw;
   transform: rotate(0deg);
 /*    -webkit-transform: rotate(-90deg); 
     -moz-transform: rotate(-90deg);*/
@@ -32,15 +44,15 @@
   right: 5%;
   width: 20vw;
   height: 20vw;
-  border: 1px solid red;
-  border-radius: 100px;
+  border: 1px solid black;
+  border-radius: 10vw;
   transform: rotate(0deg);
 /*    -webkit-transform: rotate(-90deg); 
     -moz-transform: rotate(-90deg);*/
 }
 #speed{
   position: absolute;
-  bottom: 5%;
+  top:80%;
   left: 5%;
   width: 15%;
 
@@ -48,17 +60,37 @@
 
 #altitude{
   position: absolute;
-  bottom: 5%;
+  top:80%;
   left: 30%;
 
 
 }
 #direction{
   position: absolute;
-  bottom: 5%;
+  top: 80%;
   left: 60%;
 
 
 }
-.measurements{
+#header-div{
+  padding: 0%;
+  margin: 0%;
+  
+}
+#body-div{
+   
+  background-size: 100%;
+  opacity: 50%;
+  background-repeat: no-repeat;
+  padding: 0%;
+  margin: 0%;
+  height:100vh;
+  }
+
+  #homeHeader{
+  top:0%;
+  left: 0%;
+  position: absolute;
+  width: 100%;
+  text-align: center;
 }

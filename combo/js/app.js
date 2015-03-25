@@ -185,7 +185,7 @@ var PageHomeContent = React.createClass({
     return React.DOM.div({id:'body-div'},null,
       React.DOM.div({id:'homeHeader'}, null,
 
-        React.DOM.h1(null, 'QuakeR')
+        React.DOM.h1(null, 'Trackr')
       ),
 
       
@@ -196,13 +196,13 @@ var PageHomeContent = React.createClass({
         React.DOM.div({id: 'map-canvas'},null),
         React.DOM.div({id: 'dataGamma'},null),
         React.DOM.div({id: 'dataBeta'},null),
-        React.DOM.div({id: 'speed'},null),
-        React.DOM.div({id: 'altitude'},null),
-        React.DOM.div({id: 'direction'},null),
+        React.DOM.div({id: 'speed'},null, 'speed'),
+        React.DOM.div({id: 'altitude'},null, 'altitude'),
+        React.DOM.div({id: 'direction'},null, 'direction'),
 
         // JQueryMobileButton({href:'#one'}, 'Begin quiz'),
 
-              React.DOM.div({className:'shake shake-constant shake-horizontal', id:'imageDiv'}, null,
+        React.DOM.div({className:'shake shake-constant shake-horizontal', id:'imageDiv'}, null,
         React.DOM.p(null, '')
 
         
