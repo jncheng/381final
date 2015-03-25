@@ -1,0 +1,64 @@
+#map-canvas, #dataGamma, #dataBeta, p{
+  margin: 0px;
+  padding: 0px;
+}
+#map-canvas{
+  position: absolute;
+  text-align: center;
+  top: 5%;
+  right: 30%;
+  width: 65%;
+  height: 80%;
+  border: 1px solid red;
+
+}
+#dataGamma{
+	position: absolute;
+  text-align: center;
+  top: 5%;
+  right: 5%;
+  width: 20vw;
+  height: 20vw;
+  border: 1px solid red;
+  border-radius: 100px;
+  transform: rotate(0deg);
+/*    -webkit-transform: rotate(-90deg); 
+    -moz-transform: rotate(-90deg);*/
+}
+#dataBeta{
+  position: absolute;
+  text-align: center;
+  bottom: 15%;
+  right: 5%;
+  width: 20vw;
+  height: 20vw;
+  border: 1px solid red;
+  border-radius: 100px;
+  transform: rotate(0deg);
+/*    -webkit-transform: rotate(-90deg); 
+    -moz-transform: rotate(-90deg);*/
+}
+#speed{
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  width: 15%;
+
+}
+
+#altitude{
+  position: absolute;
+  bottom: 5%;
+  left: 30%;
+
+
+}
+#direction{
+  position: absolute;
+  bottom: 5%;
+  left: 60%;
+
+
+}
+.measurements{
+}
