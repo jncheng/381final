@@ -1,4 +1,4 @@
-#map-canvas, #dataGamma, #dataBeta{
+#map-canvas, #dataGamma, #dataBeta, p{
   margin: 0px;
   padding: 0px;
 }
@@ -37,4 +37,28 @@
   transform: rotate(0deg);
 /*    -webkit-transform: rotate(-90deg); 
     -moz-transform: rotate(-90deg);*/
+}
+#speed{
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  width: 15%;
+
+}
+
+#altitude{
+  position: absolute;
+  bottom: 5%;
+  left: 30%;
+
+
+}
+#direction{
+  position: absolute;
+  bottom: 5%;
+  left: 60%;
+
+
+}
+.measurements{
 }

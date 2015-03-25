@@ -3,6 +3,8 @@ var backgroundColor = '#B3E5FC'
 init();
 
 function init() {
+
+
   
   //Find our div containers in the DOM
   var dataContainerOrientation = document.getElementById('dataGamma', 'dataBeta');
@@ -12,14 +14,18 @@ function init() {
   if(window.DeviceOrientationEvent) {
     window.addEventListener('deviceorientation', function(event) {
       var alpha = event.alpha;
-      var beta = event.beta;
-      var gamma = event.gamma + 90;
+      var beta = event.beta.toFixed(1);
+      var gamma = (event.gamma + 90).toFixed(1);
+
+      // beta.toFixed(1); // 2.40
+
 
       if(alpha!=null || beta!=null || gamma!=null) {
         
 
         dataGamma.innerHTML = 'Pitch: ' + gamma;
         dataBeta.innerHTML = 'Camber: ' + beta;
+       // direction.innerHTML = 'Direction: ' + alpha;
 
 
       }
@@ -33,6 +39,7 @@ function init() {
           dataGamma.style.mozTransform = 'rotate('+gamma+'deg)';          
           dataBeta.style.webkitTransform = 'rotate('+beta+'deg)'; 
           dataBeta.style.mozTransform = 'rotate('+beta+'deg)';
+
     }, false);
   }
 }   
