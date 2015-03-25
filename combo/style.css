@@ -29,10 +29,10 @@ h1{
   text-align: center;
   top: 15%;
   right: 5%;
-  width: 20vw;
-  height: 20vw;
+  width: 18vw;
+  height: 18vw;
   border: 1px solid black;
-  border-radius: 10vw;
+  border-radius: 9vw;
   transform: rotate(0deg);
 /*    -webkit-transform: rotate(-90deg); 
     -moz-transform: rotate(-90deg);*/
@@ -42,10 +42,10 @@ h1{
   text-align: center;
   bottom: 15%;
   right: 5%;
-  width: 20vw;
-  height: 20vw;
+  width: 18vw;
+  height: 18vw;
   border: 1px solid black;
-  border-radius: 10vw;
+  border-radius: 9vw;
   transform: rotate(0deg);
 /*    -webkit-transform: rotate(-90deg); 
     -moz-transform: rotate(-90deg);*/
