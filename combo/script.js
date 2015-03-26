@@ -75,7 +75,6 @@ initmap();
 
 
 function initmap() {
-  if(mapOn){
   context.fillStyle = backgroundColor;
   context.fillRect ( 0 , 0 , canvas.width, canvas.height );
   //Find our div containers in the DOM
@@ -125,9 +124,6 @@ function initmap() {
   // }
   //drawRect(50,50);
 }   
-} else {
-  
-}
 drawCircle(centerX, centerY, 1);
 
 function drawCircle(x, y, num)
