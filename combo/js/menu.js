@@ -9,6 +9,7 @@ var PageOneContent = React.createClass({
     if (mapOn) {
       document.getElementById('mapCheck').style.color = "#ff0000";
       mapOn = false;
+      intimap();
     } else {
       document.getElementById('mapCheck').style.color = "#000000";
       mapOn = true;
