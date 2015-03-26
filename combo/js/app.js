@@ -28,12 +28,13 @@
 var score = 0;
 var numberOfQuestions = 5;
 
-var currentPage = 0;
-var pageOneAnswered = false;
-var pageTwoAnswered = false;
-var pageThreeAnswered = false;
-var pageFourAnswered = false;
-var pageFiveAnswered = false;
+var mapOn = true;
+var pitchOn = true;
+var camberOn = true;
+var speedOn = true;
+var altitudeOn = true;
+var directionOn = true;
+
 
 
 /*function for adding to score*/
@@ -102,12 +103,8 @@ var App = React.createClass({
   render: function() {
     return React.DOM.div({className:'app'},
       JQueryMobilePage({id:'home'}, PageHomeContent(null)),
-      JQueryMobilePage({id:'one'}, PageOneContent(null)),
-      JQueryMobilePage({id:'two'}, PageTwoContent(null)),
-      JQueryMobilePage({id:'three'}, PageThreeContent(null)),
-      JQueryMobilePage({id:'four'}, PageFourContent(null)),
-      JQueryMobilePage({id:'five'}, PageFiveContent(null)),
-      JQueryMobilePage({id:'results', headerTheme:'b'}, PageResultsContent(null))
+      JQueryMobilePage({id:'menu'}, PageOneContent(null))
+      
     );
   }
 });
@@ -218,7 +215,9 @@ var PageHomeContent = React.createClass({
         React.DOM.div({id: 'altitude'},null, 'altitude'),
         React.DOM.div({id: 'direction'},null, 'direction'),
 
-        // JQueryMobileButton({href:'#one'}, 'Begin quiz'),
+        React.DOM.div({id: 'menuDiv'},null,
+          JQueryMobileButton({id: 'menuButton',href:'#menu'}, '')
+        ),
 
         React.DOM.div({className:'shake shake-constant shake-horizontal', id:'imageDiv'}, null,
         React.DOM.p(null, '')

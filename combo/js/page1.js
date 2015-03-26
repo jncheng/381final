@@ -88,16 +88,16 @@ var PageOneContent = React.createClass({
        
         React.DOM.p(null, React.DOM.button({className: 'answers',id: 'wrong_1_3', onClick: this.handleClick3},null, 'Pineapple')),
 
-        React.DOM.h3(null, ''),
+        React.DOM.h3(null, '')
         //return React.DOM.div(null,
         // return React.DOM.div({id: 'left-col'}, 
-        React.DOM.div({id: 'right-col'},null,
-          JQueryMobileButton({id: 'nextQ_1',href:'#two'}, '>')
-        ),
-        React.DOM.div({id: 'left-col'},null,
-          JQueryMobileButton({id: 'homeQ',href:'#home'}, 'Home')
+        // React.DOM.div({id: 'right-col'},null,
+        //   JQueryMobileButton({id: 'nextQ_1',href:'#two'}, '>')
+        // ),
+        // React.DOM.div({id: 'left-col'},null,
+        //   JQueryMobileButton({id: 'homeQ',href:'#home'}, 'Home')
 
-        )
+        // )
       //)
       // );
       // return  React.DOM.div({id: 'right-col'},

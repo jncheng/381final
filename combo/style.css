@@ -9,6 +9,37 @@ h1{
   margin:0%;
   text-shadow: none;
 }
+#menulist{
+  position: absolute;
+  top: 10%;
+}
+
+#menuDiv{
+
+  position: absolute;
+  top: 0%;
+  left: 1%;
+  margin:0px;
+  padding-top: 1%;
+
+}
+#menuButton:hover{
+    border-color: white;
+}
+#menuButton{
+  height:50px;
+  background-image:url("images/menubuttonsmall.png");
+  background-repeat: no-repeat;
+  background-color: #42A5F5;
+  border-color: black;
+  box-shadow: none;
+/*  width: 20px;
+*/  margin: 0px;
+  /*margin-top:1%;
+  margin-left:1%;
+  padding: 5%;
+  height:1%;*/
+}
 
 #map-canvas, #dataGamma, #dataBeta, p{
   margin: 0px;
@@ -77,6 +108,10 @@ h1{
   margin: 0%;
   
 }
+#body{
+  margin: 0px;
+  padding: 0px;
+}
 #body-div{
    
   background-size: 100%;
@@ -85,9 +120,9 @@ h1{
   padding: 0%;
   margin: 0%;
   height:100vh;
-  }
+}
 
-  #homeHeader{
+#homeHeader{
   top:0%;
   left: 0%;
   position: absolute;
