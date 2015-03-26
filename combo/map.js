@@ -5,7 +5,6 @@
 var map;
 
 function initialize() {
-  if(mapOn){
   var mapOptions = {
     zoom: 14
   };
@@ -41,10 +40,8 @@ function initialize() {
     // Browser doesn't support Geolocation
     handleNoGeolocation(false);
   }
-} else {
-  
 }
-} 
+
 function handleNoGeolocation(errorFlag) {
   if (errorFlag) {
     var content = 'Error: The Geolocation service failed.';
