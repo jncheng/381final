@@ -7,7 +7,7 @@ var PageOneContent = React.createClass({
     console.log("hello");
 
     if (menuOn) {
-      document.getElementById('menulist').style.left = "-17%";
+      document.getElementById('menulist').style.left = "-20%";
         menuOn = false;
       //intimap();
     } else {
@@ -115,7 +115,7 @@ var PageOneContent = React.createClass({
 
       
       React.DOM.div({id:'menulist'},null,
-        React.DOM.p(null, React.DOM.p({className: 'checklist',id: 'mapCheck', onClick: this.handleClick1},'Map:')),
+        React.DOM.p(null, React.DOM.button({className: 'checklist',id: 'mapCheck', onClick: this.handleClick1},'Map:')),
         React.DOM.p(null, React.DOM.button({className: 'checklist',id: 'camberCheck', onClick: this.handleClick2},'Camber:')),
         React.DOM.p(null, React.DOM.button({className: 'checklist',id: 'pitchCheck', onClick: this.handleClick3},'pitch:')),
         React.DOM.p(null, React.DOM.button({className: 'checklist',id: 'speedCheck', onClick: this.handleClick4},'Speed:')),
