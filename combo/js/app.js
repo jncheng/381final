@@ -28,6 +28,8 @@
 var score = 0;
 var numberOfQuestions = 5;
 
+var menuOn = false;
+
 var mapOn = true;
 var pitchOn = true;
 var camberOn = true;
