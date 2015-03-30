@@ -134,26 +134,9 @@ var PageOneContent = React.createClass({
 
         
         )
-      ),
-
-      React.DOM.div({id:'body'},null,
-        React.DOM.div({id: 'map-canvas'},null),
-        React.DOM.div({id: 'dataGamma'},null),
-        React.DOM.div({id: 'dataBeta'},null),
-        React.DOM.div({id: 'speed'},null, 'speed'),
-        React.DOM.div({id: 'altitude'},null, 'altitude'),
-        React.DOM.div({id: 'direction'},null, 'direction'),
-
-        React.DOM.div({id: 'menuDiv'},null,
-          JQueryMobileButton({id: 'menuButton',href:'#menu'}, '')
-        ),
-
-        React.DOM.div({className:'shake shake-constant shake-horizontal', id:'imageDiv'}, null,
-        React.DOM.p(null, '')
-
-        
-        )
       )
+
+    
    
     );
   }
