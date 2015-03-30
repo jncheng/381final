@@ -17,6 +17,10 @@ button{
   border: 40px;
 }
 
+#mapCheck.hover{
+  color:red;
+}
+
 #mapCheck,#camberCheck,#pitchCheck,#speedCheck,#altitudeCheck,#directionCheck{
 /*width: 10%;
 */color: #42A5F5;
@@ -24,6 +28,9 @@ button{
 */
 width: 92%;
 margin-left: 7%;
+margin: 0px;
+padding: 0px;
+border: none;
 
 
 }
