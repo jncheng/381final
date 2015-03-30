@@ -7,7 +7,7 @@ var PageOneContent = React.createClass({
     console.log("hello");
 
     if (menuOn) {
-      document.getElementById('menulist').style.left = "-20%";
+      document.getElementById('menulist').style.left = "-33%";
         menuOn = false;
       //intimap();
     } else {

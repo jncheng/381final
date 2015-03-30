@@ -11,6 +11,8 @@ h1{
 }
 
 button{
+  margin: 0px;
+  padding: 0px;
   background-color: #42A5F5;
   border: 40px;
 }
@@ -20,8 +22,8 @@ button{
 */color: #42A5F5;
 /*text-align: right;
 */
-width: 85%;
-margin-left: 14%;
+width: 92%;
+margin-left: 7%;
 
 
 }
@@ -30,10 +32,10 @@ margin-left: 14%;
   position: relative;
   padding-top: 5%;
   padding-right: 1%;
-  width: 15%;
+  width: 30%;
   height:90%;
   top: -4%;
-  left: -20%;
+  left: -33%;
   background-color: #42A5F5;
 }
 
