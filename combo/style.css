@@ -9,10 +9,24 @@ h1{
   margin:0%;
   text-shadow: none;
 }
+
+button{
+  background-color: #42A5F5;
+  border: 40px;
+}
+
+#mapCheck,#camberCheck,#pitchCheck,#speedCheck,#altitudeCheck,#directionCheck{
+/*width: 10%;
+*/color: #42A5F5;
+text-align: right;
+
+}
 #menulist{
-  position: absolute;
+  position: relative;
+  width: 15%;
   top: 10%;
-  left: -10%;
+  left: -17%;
+  background-color: #42A5F5;
 }
 
 #menuDiv{
