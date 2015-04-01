@@ -9,7 +9,11 @@ h1{
   margin:0%;
   text-shadow: none;
 }
+body, html{
+  padding: 0px;
+  margin: 0px;
 
+}
 button{
   margin: 0px;
   padding: 0px;
@@ -17,33 +21,57 @@ button{
   border: 40px;
 }
 
+#settings{
+  position: absolute;
+  left: 0%;
+  top: -4%;
+  width: 20%;
+  padding: 1%;
+  margin: 0px;
+  margin-top: 1%;
+  margin-left: 1%;
+  background-color: #42A5F5;
+  text-align: left;
+  font-style: normal;
+  text-shadow: none;
+  box-shadow: none;
+  border: none;
+}
+
 #mapCheck.hover{
   color:red;
 }
 
 #mapCheck,#camberCheck,#pitchCheck,#speedCheck,#altitudeCheck,#directionCheck{
-/*width: 10%;
-*/color: #42A5F5;
-/*text-align: right;
-*/
+color: white;
+text-align: left;
+font-style: normal;
+text-shadow: none;
+background: #42A5F5;
+box-shadow: none;
 width: 92%;
+margin: 1%;
+padding: 1%;
 margin-left: 7%;
-margin: 0px;
-padding: 0px;
 border: none;
 
 
 }
 #menulist{
+  margin-top: 3%;
   text-align: right;
   position: relative;
-  padding-top: 5%;
+  padding-top: 3%;
   padding-right: 1%;
-  width: 30%;
-  height:90%;
-  top: -4%;
-  left: -33%;
+  padding-left: 3%;
+  width: 33%;
+  height:86%;
+  top: -10%;
+  left: -40%;
   background-color: #42A5F5;
+  border: 2px solid white;
+  border-radius: 15px;
+  border-left: none;
 }
 
 #menuDiv{
@@ -145,19 +173,26 @@ border: none;
   padding: 0px;
 }
 #body-div{
-   
+  left: -3%;
+  width: 106%;
+  top: -50%;
+  position: relative;
+
   background-size: 100%;
   opacity: 50%;
   background-repeat: no-repeat;
   padding: 0%;
   margin: 0%;
   height:100vh;
+  background-color: #E1F5FE
 }
 
 #homeHeader{
-  top:0%;
+  top:-4.5%;
   left: 0%;
-  position: absolute;
+  position: relative;
   width: 100%;
   text-align: center;
+  margin-top: 0px;
+  padding-top: 0px;
 }

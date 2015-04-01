@@ -1,17 +1,27 @@
 
 /** Application page one component. */
+var on = 1;
+
+var mapVar = (on > 1) ? "Too young" : "Old enough";
+
+
+// mapVar = 1;
+
+// mapVar = on;
 var PageOneContent = React.createClass({
   displayName: 'PageOneContent',
+
 
   handleClickSettings: function(id) {
     console.log("hello");
 
     if (menuOn) {
-      document.getElementById('menulist').style.left = "-33%";
+      document.getElementById('menulist').style.left = "-40%";
+
         menuOn = false;
       //intimap();
     } else {
-      document.getElementById('menulist').style.left = "-2%";
+      document.getElementById('menulist').style.left = "-3.5%";
         menuOn = true;
     }
     
@@ -20,12 +30,16 @@ var PageOneContent = React.createClass({
     console.log("hello");
 
     if (mapOn) {
+      on = 2;
+
       document.getElementById('mapCheck').style.color = "#ff0000";
       mapOn = false;
-      intimap();
+      // intimap();
     } else {
       document.getElementById('mapCheck').style.color = "#000000";
+      on = 1;
       mapOn = true;
+      
     }
     
   },
@@ -106,21 +120,18 @@ var PageOneContent = React.createClass({
       //   JQueryMobileButton({id: 'menuButton',href:'#home'}, '')
 
       // ),
-      React.DOM.div(null, React.DOM.button({className: 'menu',id: 'settings', onClick: this.handleClickSettings},'home')
-        // JQueryMobileButton({id: 'menuButton',href:'#home'}, '')
-        
-      ),
+     
       
 
 
       
       React.DOM.div({id:'menulist'},null,
-        React.DOM.p(null, React.DOM.button({className: 'checklist',id: 'mapCheck', onClick: this.handleClick1},'Map:')),
-        React.DOM.p(null, React.DOM.button({className: 'checklist',id: 'camberCheck', onClick: this.handleClick2},'Camber:')),
-        React.DOM.p(null, React.DOM.button({className: 'checklist',id: 'pitchCheck', onClick: this.handleClick3},'pitch:')),
-        React.DOM.p(null, React.DOM.button({className: 'checklist',id: 'speedCheck', onClick: this.handleClick4},'Speed:')),
-        React.DOM.p(null, React.DOM.button({className: 'checklist',id: 'altitudeCheck', onClick: this.handleClick5},'Altitude:')),
-        React.DOM.p(null, React.DOM.button({className: 'checklist',id: 'directionCheck', onClick: this.handleClick6},'Direction:')),
+        React.DOM.p(null, React.DOM.button({className: 'checklist',id: 'mapCheck', onClick: this.handleClick1},'Map: ', mapVar)),
+        React.DOM.p(null, React.DOM.button({className: 'checklist',id: 'camberCheck', onClick: this.handleClick2},'Camber')),
+        React.DOM.p(null, React.DOM.button({className: 'checklist',id: 'pitchCheck', onClick: this.handleClick3},'pitch')),
+        React.DOM.p(null, React.DOM.button({className: 'checklist',id: 'speedCheck', onClick: this.handleClick4},'Speed')),
+        React.DOM.p(null, React.DOM.button({className: 'checklist',id: 'altitudeCheck', onClick: this.handleClick5},'Altitude')),
+        React.DOM.p(null, React.DOM.button({className: 'checklist',id: 'directionCheck', onClick: this.handleClick6},'Direction')),
         // React.DOM.div({id: 'dataGamma'},null),
         // React.DOM.div({id: 'dataBeta'},null),
         // React.DOM.div({id: 'speed'},null, 'speed'),
@@ -134,6 +145,11 @@ var PageOneContent = React.createClass({
 
         
         )
+      ),
+
+      React.DOM.div(null, React.DOM.button({className: 'menu',id: 'settings', onClick: this.handleClickSettings},'home')
+        // JQueryMobileButton({id: 'menuButton',href:'#home'}, '')
+        
       )
 
     
