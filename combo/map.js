@@ -4,6 +4,8 @@
 var myVar=setInterval(function(){updateLocation(location)},1000);
 
 var map;
+var pos
+var markerMain;
 
 function initialize() {
   var mapOptions = {
@@ -19,10 +21,10 @@ function initialize() {
 
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
-      var pos = new google.maps.LatLng(position.coords.latitude,
+      pos = new google.maps.LatLng(position.coords.latitude,
                                        position.coords.longitude);
 
-      var markerMain = new google.maps.Marker({
+      markerMain = new google.maps.Marker({
       position: pos,
       map: map,
 
@@ -51,22 +53,22 @@ function initialize() {
 function updateLocation(location) {
   navigator.geolocation.getCurrentPosition(function(position) {
 
-    var pos = new google.maps.LatLng(position.coords.latitude,
+    var newPos = new google.maps.LatLng(position.coords.latitude,
                                          position.coords.longitude);
-    markerMain = new google.maps.Marker({
+    markerMain.setPosition(newPos)
 
-      position: pos,
-      map: map,
+      // position: pos,
+      // map: map,
 
-      title: 'Hello World!'
-      });
+      // title: 'Hello World!'
+      // });
       // var infowindow = new google.maps.InfoWindow({
       //   map: map,
       //   position: pos,
       //   content: 'Location found using HTML5.'
       // });
 
-      map.setCenter(pos);
+      map.setCenter(newPos);
 
       console.log('Hello');
   });
