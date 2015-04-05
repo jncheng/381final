@@ -40,6 +40,19 @@ function initialize() {
     // Browser doesn't support Geolocation
     handleNoGeolocation(false);
   }
+google.maps.event.addListener(map, 'click', function(event) {
+ placeMarker(event.latLng);
+});
+  
+}
+
+
+
+function placeMarker(location) {
+    var marker = new google.maps.Marker({
+        position: location, 
+        map: map
+    });
 }
 
 function handleNoGeolocation(errorFlag) {
