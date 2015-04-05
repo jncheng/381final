@@ -1,6 +1,7 @@
 // Note: This example requires that you consent to location sharing when
 // prompted by your browser. If you see a blank space instead of the map, this
 // is probably because you have denied permission for location sharing.
+var myVar=setInterval(function(){updateLocation(location)},1000);
 
 var map;
 
@@ -21,9 +22,10 @@ function initialize() {
       var pos = new google.maps.LatLng(position.coords.latitude,
                                        position.coords.longitude);
 
-      var marker = new google.maps.Marker({
+      var markerMain = new google.maps.Marker({
       position: pos,
       map: map,
+
       title: 'Hello World!'
       });
       // var infowindow = new google.maps.InfoWindow({
@@ -40,20 +42,43 @@ function initialize() {
     // Browser doesn't support Geolocation
     handleNoGeolocation(false);
   }
-google.maps.event.addListener(map, 'click', function(event) {
- placeMarker(event.latLng);
-});
-
-
-
+  google.maps.event.addListener(map, 'click', function(event) {
+   placeMarker(event.latLng);
+  });
+  updateLocation();
 }
 
+function updateLocation(location) {
+  navigator.geolocation.getCurrentPosition(function(position) {
+
+    var pos = new google.maps.LatLng(position.coords.latitude,
+                                         position.coords.longitude);
+    markerMain = new google.maps.Marker({
+
+      position: pos,
+      map: map,
+
+      title: 'Hello World!'
+      });
+      // var infowindow = new google.maps.InfoWindow({
+      //   map: map,
+      //   position: pos,
+      //   content: 'Location found using HTML5.'
+      // });
+
+      map.setCenter(pos);
+
+      console.log('Hello');
+  });
+}
 
 
 function placeMarker(location) {
     var marker = new google.maps.Marker({
-        position: pos, 
-        map: map
+        position: location, 
+        map: map,
+        icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+
     });
 }
 
