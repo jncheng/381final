@@ -43,14 +43,16 @@ function initialize() {
 google.maps.event.addListener(map, 'click', function(event) {
  placeMarker(event.latLng);
 });
-  
+
+
+
 }
 
 
 
 function placeMarker(location) {
     var marker = new google.maps.Marker({
-        position: location, 
+        position: pos, 
         map: map
     });
 }
