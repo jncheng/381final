@@ -6,6 +6,8 @@ var myVar=setInterval(function(){updateLocation(location)},1000);
 var map;
 var pos
 var markerMain;
+var infowindow;
+
 
 function initialize() {
   var mapOptions = {
@@ -18,6 +20,17 @@ function initialize() {
 
     map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
+    // var html = "<table>" +
+    //              "<tr><td>Name:</td> <td><input type='text' id='name'/> </td> </tr>" +
+    //              "<tr><td>Address:</td> <td><input type='text' id='address'/></td> </tr>" +
+    //              "<tr><td>Type:</td> <td><select id='type'>" +
+    //              "<option value='bar' SELECTED>bar</option>" +
+    //              "<option value='restaurant'>restaurant</option>" +
+    //              "</select> </td></tr>" +
+    //              "<tr><td></td><td><input type='button' value='Save & Close' onclick='saveData()'/></td></tr>";
+    // infowindow = new google.maps.InfoWindow({
+    //  content: html
+    // });
 
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -44,8 +57,26 @@ function initialize() {
     // Browser doesn't support Geolocation
     handleNoGeolocation(false);
   }
+
+  // google.maps.event.addListener(map, "click", function(event) {
+  //     marker = new google.maps.Marker({
+  //       position: event.latLng,
+  //       map: map,
+  //       icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+
+  //     });
+  //     google.maps.event.addListener(marker, "click", function() {
+  //       infowindow.open(map, marker);
+  //     });
+  // });
+
   google.maps.event.addListener(map, 'click', function(event) {
    placeMarker(event.latLng);
+
+    google.maps.event.addListener(placeMarker, "click", function() {
+      infowindow.open(map, marker);
+    });
+
   });
   updateLocation();
 }
@@ -72,6 +103,7 @@ function updateLocation(location) {
 
       console.log('Hello');
   });
+
 }
 
 
@@ -81,6 +113,21 @@ function placeMarker(location) {
         map: map,
         icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
 
+    });
+    var html = "<table>" +
+                 "<tr><td>Name:</td> <td><input type='text' id='name'/> </td> </tr>" +
+                 "<tr><td>Address:</td> <td><input type='text' id='address'/></td> </tr>" +
+                 "<tr><td>Type:</td> <td><select id='type'>" +
+                 "<option value='bar' SELECTED>bar</option>" +
+                 "<option value='restaurant'>restaurant</option>" +
+                 "</select> </td></tr>" +
+                 "<tr><td></td><td><input type='button' value='Save & Close' onclick='saveData()'/></td></tr>";
+    infowindow = new google.maps.InfoWindow({
+     content: html
+    });
+
+    google.maps.event.addListener(marker, "click", function() {
+      infowindow.open(map, marker);
     });
 }
 
