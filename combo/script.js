@@ -113,7 +113,7 @@ console.log(angle1);
 
         angle1 = 0;
 
-          create_marker(pos, 'New Marker', EditForm, true, true, true, "icons/pin_green.png");
+          create_marker(pos, 'New Marker', EditForm, true, true, true, "../icons/pin_green.png");
 
         // alert(beta);
         var myVar=setInterval(function () {
@@ -135,7 +135,7 @@ console.log(angle1);
 
         angle2 = 0;
 
-          create_marker(pos, 'New Marker', EditForm, true, true, true, "icons/pin_green.png");
+          create_marker(pos, 'New Marker', EditForm, true, true, true, "../icons/pin_green.png");
 
         // alert(beta);
         var myVar=setInterval(function () {
@@ -157,7 +157,7 @@ console.log(angle1);
 
         angle3 = 0;
 
-          create_marker(pos, 'New Marker', EditForm, true, true, true, "icons/pin_green.png");
+          create_marker(pos, 'New Marker', EditForm, true, true, true, "../icons/pin_green.png");
 
         // alert(beta);
         var myVar=setInterval(function () {
@@ -179,7 +179,7 @@ console.log(angle1);
 
         angle4 = 0;
 
-          create_marker(pos, 'New Marker', EditForm, true, true, true, "icons/pin_green.png");
+          create_marker(pos, 'New Marker', EditForm, true, true, true, "../icons/pin_green.png");
 
         // alert(beta);
         var myVar=setInterval(function () {

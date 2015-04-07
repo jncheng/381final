@@ -1,23 +1,10 @@
 /**
  * - App
  *   |-- JQueryMobilePage (one)
+ *   |   |-- JQueryMobileBody
  *   |   |-- JQueryMobileHeader
- *   |   |-- JQueryMobileContent
- *   |   |   |-- PageOneContent
- *   |   |       |-- JQueryMobileButton
- *   |   |-- JQueryMobileFooter
- *   |-- JQueryMobilePage (two)
- *   |   |-- JQueryMobileHeader
- *   |   |-- JQueryMobileContent
- *   |   |   |-- PageTwoContent
- *   |   |       |-- JQueryMobileButton
- *   |   |-- JQueryMobileFooter
- *   |-- JQueryMobilePage (popup)
- *       |-- JQueryMobileHeader
- *       |-- JQueryMobileContent
- *       |   |-- PagePopUpContent
- *       |       |-- JQueryMobileButton
- *       |-- JQueryMobileFooter
+ *   |   |-- PageOneContent
+
  */
 
  /* global document, React */
@@ -327,32 +314,7 @@ var PageHomeContent = React.createClass({
 
         
         )
-      ),
-
-      React.DOM.div({id:'menulist'},null,
-        React.DOM.p(null, React.DOM.button({className: 'checklist',id: 'mapCheck', onClick: this.handleClick1},'Map: ', mapVar)),
-        React.DOM.p(null, React.DOM.button({className: 'checklist',id: 'camberCheck', onClick: this.handleClick2},'Camber')),
-        React.DOM.p(null, React.DOM.button({className: 'checklist',id: 'pitchCheck', onClick: this.handleClick3},'pitch')),
-        React.DOM.p(null, React.DOM.button({className: 'checklist',id: 'speedCheck', onClick: this.handleClick4},'Speed')),
-        React.DOM.p(null, React.DOM.button({className: 'checklist',id: 'altitudeCheck', onClick: this.handleClick5},'Altitude')),
-        React.DOM.p(null, React.DOM.button({className: 'checklist',id: 'directionCheck', onClick: this.handleClick6},'Direction')),
-        // React.DOM.div({id: 'dataGamma'},null),
-        // React.DOM.div({id: 'dataBeta'},null),
-        // React.DOM.div({id: 'speed'},null, 'speed'),
-        // React.DOM.div({id: 'altitude'},null, 'altitude'),
-        // React.DOM.div({id: 'direction'},null, 'direction'),
-
-
-
-        React.DOM.div({className:'shake shake-constant shake-horizontal', id:'imageDiv'}, null,
-        React.DOM.p(null, '')
-
-        
-        )
-      ),
-
-      React.DOM.div(null, React.DOM.button({className: 'menu',id: 'settings', onClick: this.handleClickSettings},'home')
-        // JQueryMobileButton({id: 'menuButton',href:'#home'}, '')
+     
         
       )
    
