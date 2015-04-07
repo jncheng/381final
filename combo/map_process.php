@@ -4,7 +4,7 @@
 // database settings 
 $db_username = 'root';
 $db_password = 'root';
-$db_name = '381';
+$db_name = 'joshchen_381';
 $db_host = 'localhost';
 
 //mysqli

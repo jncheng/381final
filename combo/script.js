@@ -168,7 +168,7 @@ console.log(angle1);
 
         }
       }
-      if(angle4 < gamma && gamma > -20){
+      if(angle4 > gamma && gamma > -20){
                 angle4 = gamma;
 
         
@@ -179,7 +179,7 @@ console.log(angle1);
 
         angle4 = 0;
 
-          create_marker(pos, 'New Marker', EditForm, true, true, true, "../icons/pin_green.png");
+        create_marker(pos, 'New Marker', EditForm, true, true, true, "../icons/pin_green.png");
 
         // alert(beta);
         var myVar=setInterval(function () {
