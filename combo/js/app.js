@@ -176,8 +176,10 @@ var JQueryMobilePage = React.createClass({
   }
 });
 
+
+
+
 var x = document.getElementById("altitude");
-var a = document.getElementById("speed");
 var h = document.getElementById('direction');
 getLocation();
 
@@ -185,12 +187,13 @@ function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.watchPosition(showPosition);
     } else { 
-        x.innerHTML = "Geolocation is not supported by this browser.";}
+        x.innerHTML = "Geolocation is not supported by this browser.";
     }
+  }
     
 function showPosition(position) {
-    altitude.innerHTML="Altitude: " + (position.coords.altitude + 0).toFixed(1) + "meters";
-    speed.innerHTML="Speed: " + position.coords.speed.toFixed(1) + "m/s";  
+    altitude.innerHTML="Altitude: " + (position.coords.altitude + 0).toFixed(1) + " meters";
+    speed.innerHTML="Speed: " + (position.coords.speed + 0).toFixed(1) + " m/s";  
     direction.innerHTML = "Direction: " + position.coords.heading;  
 }
 

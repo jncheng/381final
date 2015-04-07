@@ -3,6 +3,8 @@
 // is probably because you have denied permission for location sharing.
 
 var myVar=setInterval(function(){updateLocation(location)},1000);
+// var myVar=setInterval(function(){initialize()},10000);
+
 
 var map;
 var pos

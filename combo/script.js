@@ -2,6 +2,9 @@ var backgroundColor = '#B3E5FC'
 var plotting = false;
 var smaller = true;
 var angle1 = 0;
+var angle2 = 0;
+var angle3 = 0;
+var angle4 = 0;
 init();
 
 function init() {
@@ -9,7 +12,52 @@ function init() {
 console.log(angle1);
 
 
-  
+
+
+  var x = 0, y = 0,
+      vx = 0, vy = 0,
+      ax = 0, ay = 0,
+      speedtotal = 0;
+    
+  if (window.DeviceMotionEvent != undefined) {
+    window.ondevicemotion = function(e) {
+
+      ax = event.accelerationIncludingGravity.x + 9.8;
+      ay = event.accelerationIncludingGravity.y * 5;
+
+      speedtotal = ax + ay;
+
+
+      document.getElementById("speed").innerHTML = 'Speed: ' + speedtotal.toFixed(0);
+
+
+    
+    }
+
+    setInterval( function() {
+      var landscapeOrientation = window.innerWidth/window.innerHeight > 1;
+      if ( landscapeOrientation) {
+        vx = vx + ay;
+        vy = vy + ax;
+      } else {
+        vy = vy - ay;
+        vx = vx + ax;
+      }
+      vx = vx * 0.98;
+      vy = vy * 0.98;
+      y = parseInt(y + vy / 50);
+      x = parseInt(x + vx / 50);
+      
+
+    }, 25);
+  } 
+
+
+
+
+
+
+
   //Find our div containers in the DOM
   var dataContainerOrientation = document.getElementById('dataGamma', 'dataBeta');
   var dataContainerMotion = document.getElementById('dataContainerMotion');
@@ -65,7 +113,27 @@ console.log(angle1);
 
         angle1 = 0;
 
+          create_marker(pos, 'New Marker', EditForm, true, true, true, "icons/pin_green.png");
 
+        // alert(beta);
+        var myVar=setInterval(function () {
+
+
+        }, 3000);
+      // if(beta >= 30 || beta <= -30){
+
+        }
+      }
+      if(angle2 < gamma && gamma < 20){
+                angle2 = gamma;
+
+        
+      }
+      if(gamma > 30){
+
+        if((angle2) > gamma){
+
+        angle2 = 0;
 
           create_marker(pos, 'New Marker', EditForm, true, true, true, "icons/pin_green.png");
 
@@ -74,64 +142,59 @@ console.log(angle1);
 
 
         }, 3000);
-
       // if(beta >= 30 || beta <= -30){
 
+        }
+      }
+      if(angle3 > beta && beta > -20){
+                angle3 = beta;
+
+        
+      }
+      if(beta < -30){
+
+        if((angle3) < beta){
+
+        angle3 = 0;
+
+          create_marker(pos, 'New Marker', EditForm, true, true, true, "icons/pin_green.png");
+
+        // alert(beta);
+        var myVar=setInterval(function () {
 
 
+        }, 3000);
+      // if(beta >= 30 || beta <= -30){
+
+        }
+      }
+      if(angle4 < gamma && gamma > -20){
+                angle4 = gamma;
+
+        
+      }
+      if(gamma < -30){
+
+        if((angle4) < gamma){
+
+        angle4 = 0;
+
+          create_marker(pos, 'New Marker', EditForm, true, true, true, "icons/pin_green.png");
+
+        // alert(beta);
+        var myVar=setInterval(function () {
+
+
+        }, 3000);
+      // if(beta >= 30 || beta <= -30){
 
         }
       }
 
-      if(beta >= 30){
+
+      if(beta >= 30 || beta <= -30){
         document.getElementById('dataBeta').style.border = "1px solid #ff0000";
         
-        // navigator.geolocation.getCurrentPosition(function(position) {
-        //   var pos = new google.maps.LatLng(position.coords.latitude,
-        //                                position.coords.longitude);  
-        //   var newMarkerPos = pos;
-        // create_marker(event.latLng, 'New Marker', EditForm, true, true, true, "icons/pin_green.png");
-
-        // var EditForm = '<p><div class="marker-edit">'+
-        // '<form action="ajax-save.php" method="POST" name="SaveMarker" id="SaveMarker">'+
-        // '<label for="pName"><span>Place Name :</span><input type="text" name="pName" class="save-name" placeholder="Enter Title" maxlength="40" /></label>'+
-        // '<label for="pDesc"><span>Description :</span><textarea name="pDesc" class="save-desc" placeholder="Enter Address" maxlength="150"></textarea></label>'+
-        // '<label for="pType"><span>Type :</span> <select name="pType" class="save-type"><option value="restaurant">Rastaurant</option><option value="bar">Bar</option>'+
-        // '<option value="house">House</option></select></label>'+
-        // '</form>'+
-        // '</div></p><button name="save-marker" class="save-marker">Save Marker Details</button>';
-
-        //Drop a new Marker with our Edit Form
-       // create_marker(pos, 'New Marker', EditForm, true, true, true, "icons/pin_green.png");
-         
-
-          // navigator.geolocation.getCurrentPosition(function(position) {
-          //   var plotpos = new google.maps.LatLng(position.coords.latitude,
-          //                                    position.coords.longitude);
-
-          //   var hillmarker = new google.maps.Marker({
-          //   position: plotpos,
-          //   map: map,
-          //   icon: 'icons/green-dot.png',
-
-
-          //   title: 'Hello World!'
-          //   });
-          //   // var infowindow = new google.maps.InfoWindow({
-          //   //   map: map,
-          //   //   position: pos,
-          //   //   content: 'Location found using HTML5.'
-          //   // });
-
-          //   map.setCenter(plotpos);
-          // }, function() {
-          //   handleNoGeolocation(true);
-          // });
-        
-        // , function() {
-        //   handleNoGeolocation(true);
-        // });
-
       } else {    
         document.getElementById('dataBeta').style.border = "1px solid #000000";
       }
@@ -145,66 +208,12 @@ console.log(angle1);
 
       }, false);
     }
-
-
-
 }
+
+
 
    
 
-
-
-
-
-initmap();
-
-
-function initmap() {
- 
-  //Find our div containers in the DOM
-  var dataContainerOrientation = document.getElementById('dataContainerOrientation');
-  var dataContainerMotion = document.getElementById('dataContainerMotion');
-
-  //Check for support for DeviceOrientation event
-  if(window.DeviceOrientationEvent) {
-    window.addEventListener('deviceorientation', function(event) {
-      var alpha = event.alpha;
-      var beta = event.beta;
-      var gamma = event.gamma;
-
-
-
-      if(alpha!=null || beta!=null || gamma!=null) {
-          context.fillStyle = backgroundColor;
-          context.fillRect ( 0 , 0 , canvas.width, canvas.height );
-        dataContainerOrientation.innerHTML = 'alpha: ' + alpha + '<br/>beta: ' + beta + '<br />gamma: ' + gamma;
-
-
-      }
-          //drawCircle(centerX, centerY, beta);       
-
-
-
-    }, false);
-
-  }
-
-  // Check for support for DeviceMotion events
-  // if(window.DeviceMotionEvent) {
-  //   window.addEventListener('devicemotion', function(event) {
-  //     var x = event.accelerationIncludingGravity.x;
-  //     var y = event.accelerationIncludingGravity.y;
-  //     var z = event.accelerationIncludingGravity.z;
-  //     var r = event.rotationRate;
-  //     var html = 'Acceleration:<br />';
-  //     html += 'x: ' + x +'<br />y: ' + y + '<br/>z: ' + z+ '<br />';
-  //     html += 'Rotation rate:<br />';
-  //     if(r!=null) html += 'alpha: ' + r.alpha +'<br />beta: ' + r.beta + '<br/>gamma: ' + r.gamma + '<br />';
-  //     dataContainerMotion.innerHTML = html;                  
-  //   });
-  // }
-  //drawRect(50,50);
-}   
 
 
 
