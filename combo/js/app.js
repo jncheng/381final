@@ -189,8 +189,8 @@ function getLocation() {
     }
     
 function showPosition(position) {
-    x.innerHTML="Altitude: " + position.coords.altitude + "meters";
-    a.innerHTML="Speed: " + position.coords.speed.toFixed(1) + "m/s";  
+    altitude.innerHTML="Altitude: " + (position.coords.altitude + 0).toFixed(1) + "meters";
+    speed.innerHTML="Speed: " + position.coords.speed.toFixed(1) + "m/s";  
     direction.innerHTML = "Direction: " + position.coords.heading;  
 }
 
