@@ -42,37 +42,6 @@ button{
   color:red;
 }
 
-#mapCheck,#camberCheck,#pitchCheck,#speedCheck,#altitudeCheck,#directionCheck{
-color: white;
-text-align: left;
-font-style: normal;
-text-shadow: none;
-background: #42A5F5;
-box-shadow: none;
-width: 92%;
-margin: 1%;
-padding: 1%;
-margin-left: 7%;
-border: none;
-
-
-}
-#menulist{
-  margin-top: 3%;
-  text-align: right;
-  position: relative;
-  padding-top: 3%;
-  padding-right: 1%;
-  padding-left: 3%;
-  width: 33%;
-  height:86%;
-  top: -10%;
-  left: -40%;
-  background-color: #42A5F5;
-  border: 2px solid white;
-  border-radius: 15px;
-  border-left: none;
-}
 
 #menuDiv{
 
@@ -109,8 +78,8 @@ border: none;
   position: absolute;
   text-align: center;
   top: 24vh;
-  right: 30%;
-  width: 65%;
+  right: 30vw;
+  width: 65vw;
   height: 60vh;
   border: 1px solid black;
 
@@ -144,22 +113,22 @@ border: none;
 #setDiv{
   position: absolute;
   text-align: center;
-  top: 15%;
-  right: 30%;
-  width: 65%;
-  height: 60%;
+  top: 15wh;
+  right: 30vw;
+  width: 65vw;
+  height: 60vh;
   border: none;
 
 }
 #dataGammaMenu{
   position: absolute;
   text-align: center;
-  top: 15%;
-  right: 5%;
-  width: 30vh;
-  height: 30vh;
+  top: 15vh;
+  right: 5vw;
+  width: 28vh;
+  height: 28vh;
   border: 1px solid black;
-  border-radius: 15vh;
+  border-radius: 14vh;
   transform: rotate(0deg);
 /*    -webkit-transform: rotate(-90deg); 
     -moz-transform: rotate(-90deg);*/
@@ -167,12 +136,12 @@ border: none;
 #dataBetaMenu{
   position: absolute;
   text-align: center;
-  bottom: 15%;
-  right: 5%;
-  width: 30vh;
-  height: 30vh;
+  bottom: 15vh;
+  right: 5vw;
+  width: 28vh;
+  height: 28vh;
   border: 1px solid black;
-  border-radius: 15vh;
+  border-radius: 14vh;
   transform: rotate(0deg);
 /*    -webkit-transform: rotate(-90deg); 
     -moz-transform: rotate(-90deg);*/
@@ -181,12 +150,12 @@ border: none;
 #dataGamma{
 	position: absolute;
   text-align: center;
-  top: 15%;
-  right: 5%;
-  width: 30vh;
-  height: 30vh;
+  top: 15vh;
+  right: 5vw;
+  width: 28vh;
+  height: 28vh;
   border: 1px solid black;
-  border-radius: 15vh;
+  border-radius: 14vh;
   transform: rotate(0deg);
 /*    -webkit-transform: rotate(-90deg); 
     -moz-transform: rotate(-90deg);*/
@@ -194,12 +163,12 @@ border: none;
 #dataBeta{
   position: absolute;
   text-align: center;
-  bottom: 15%;
-  right: 5%;
-  width: 30vh;
-  height: 30vh;
+  bottom: 15vh;
+  right: 5vw;
+  width: 28vh;
+  height: 28vh;
   border: 1px solid black;
-  border-radius: 15vh;
+  border-radius: 14vh;
   transform: rotate(0deg);
 /*    -webkit-transform: rotate(-90deg); 
     -moz-transform: rotate(-90deg);*/
