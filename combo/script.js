@@ -83,10 +83,9 @@ console.log(angle1);
         // setPitch1 =  (gamma);
         // var setPitch = (gamma);
 
-      var setPitch1 = (event.gamma + 90);
       var setPitch = (gamma);
 
-      var setCamber = (event.beta);
+      var setCamber = (beta);
 
       if(variablesSet){
 
@@ -314,27 +313,23 @@ console.log(angle1);
       
 
       if(angle1 < newBeta && newBeta < 20){
-                angle1 = newBeta;
-
-        
+        angle1 = newBeta;  
       }
+
       if(newBeta > 30){
-
         if((angle1) > newBeta){
-
         angle1 = 0;
 
           create_marker(pos, 'New Marker', EditForm, true, true, true, "../icons/pin_green.png");
 
         // alert(beta);
         var myVar=setInterval(function () {
-
-
+        
         }, 3000);
-      // if(beta >= 30 || beta <= -30){
 
         }
       }
+     
       if(angle2 < newGamma && newGamma < 20){
                 angle2 = newGamma;
 
