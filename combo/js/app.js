@@ -16,14 +16,14 @@ var score = 0;
 var numberOfQuestions = 5;
 
 var menuOn = false;
-
+var variablesSet = false;
 var mapOn = true;
 var pitchOn = true;
 var camberOn = true;
 var speedOn = true;
 var altitudeOn = true;
 var directionOn = true;
-
+console.log(variablesSet);
 
 
 /*function for adding to score*/
@@ -92,7 +92,7 @@ var App = React.createClass({
   render: function() {
     return React.DOM.div({className:'app'},
       JQueryMobilePage({id:'home'}, PageHomeContent(null)),
-      JQueryMobilePage({id:'menu'}, PageOneContent(null))
+      JQueryMobilePage({id:'app'}, PageOneContent(null))
       
     );
   }
@@ -188,105 +188,27 @@ function showPosition(position) {
 var PageHomeContent = React.createClass({
   displayName: 'PageHomeContent',
 
-
-    handleClickSettings: function(id) {
-    console.log("hello");
-
-    if (menuOn) {
-      document.getElementById('menulist').style.left = "-40%";
-
-        menuOn = false;
-      //intimap();
-    } else {
-      document.getElementById('menulist').style.left = "-3.5%";
-        menuOn = true;
-    }
-    
-  },
   handleClick1: function(id) {
+    resizeMap();
     console.log("hello");
+    if (variablesSet) {
+      variablesSet = false;
 
-    if (mapOn) {
-      on = 2;
+      document.getElementById('setValues').style.color = "#000000";
 
-      document.getElementById('mapCheck').style.color = "#ff0000";
-      mapOn = false;
       // intimap();
     } else {
-      document.getElementById('mapCheck').style.color = "#000000";
-      on = 1;
-      mapOn = true;
+      variablesSet = true;
+
+      init();
+      // setTilt();
+      document.getElementById('setValues').style.color = "#ff0000";
       
     }
     
   },
 
-  handleClick2: function(id) {
-    console.log("hello");
-
-    if (camberOn) {
-      document.getElementById('camberCheck').style.color = "#ff0000";
-      camberOn = false;
-    } else {
-      document.getElementById('camberCheck').style.color = "#000000";
-      camberOn = true;
-    }
-    
-  },
-
-  handleClick3: function(id) {
-    console.log("hello");
-
-    if (pitchOn) {
-      document.getElementById('pitchCheck').style.color = "#ff0000";
-      pitchOn = false;
-    } else {
-      document.getElementById('pitchCheck').style.color = "#000000";
-      pitchOn = true;
-    }
-    
-  },
   
-  handleClick4: function(id) {
-    console.log("hello");
-
-    if (speedOn) {
-      document.getElementById('speedCheck').style.color = "#ff0000";
-      speedOn = false;
-    } else {
-      document.getElementById('speedCheck').style.color = "#000000";
-      speedOn = true;
-    }
-    
-  },
-
-  handleClick5: function(id) {
-    console.log("hello");
-
-    if (altitudeOn) {
-      document.getElementById('altitudeCheck').style.color = "#ff0000";
-      altitudeOn = false;
-    } else {
-      document.getElementById('altitudeCheck').style.color = "#000000";
-      altitudeOn = true;
-    }
-    
-  },
-
-  handleClick6: function(id) {
-    console.log("hello");
-
-    if (directionOn) {
-      document.getElementById('directionCheck').style.color = "#ff0000";
-      directionOn = false;
-    } else {
-      document.getElementById('directionCheck').style.color = "#000000";
-      directionOn = true;
-    }
-    
-  }, 
-
-
 
   render: function() {
     return React.DOM.div({id:'body-div'},null,
@@ -300,12 +222,16 @@ var PageHomeContent = React.createClass({
       
       
       React.DOM.div({id:'body'},null,
-        React.DOM.div({id: 'map-canvas'},null),
-        React.DOM.div({id: 'dataGamma'},null),
-        React.DOM.div({id: 'dataBeta'},null),
-        React.DOM.div({id: 'speed'},null, 'speed'),
-        React.DOM.div({id: 'altitude'},null, 'altitude'),
-        React.DOM.div({id: 'direction'},null, 'direction'),
+
+        React.DOM.div({id: 'setDiv'},null,
+          JQueryMobileButton({id: 'setValues', onClick: this.handleClick1,href:'#app'}, 'Tap to set Phone Orientation')
+
+          // React.DOM.p(null, React.DOM.button({id: 'setValues',href:'#home', onClick: this.handleClick1}, 'Tap to set Phone Orientation'))
+        ),
+
+        React.DOM.div({id: 'dataGammaMenu'},null),
+        React.DOM.div({id: 'dataBetaMenu'},null),
+
 
 
 
@@ -320,4 +246,11 @@ var PageHomeContent = React.createClass({
    
     );
   }
+    
+
+
+
+
+
+
 });

@@ -7,33 +7,31 @@ var myVar=setInterval(function(){updateLocation(location)},1000);
 
 
 var map;
-var pos
+var pos;
 var markerMain;
 var infowindow;
 
 
+
 function initialize() {
+
   var mapOptions = {
-    zoom: 14
+
+    zoom: 14,
+    minZoom: 10,
+    maxZoom: 16
+
+
   };
-  map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
+
 
   // Try HTML5 geolocation
 
     map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
-    // var html = "<table>" +
-    //              "<tr><td>Name:</td> <td><input type='text' id='name'/> </td> </tr>" +
-    //              "<tr><td>Address:</td> <td><input type='text' id='address'/></td> </tr>" +
-    //              "<tr><td>Type:</td> <td><select id='type'>" +
-    //              "<option value='bar' SELECTED>bar</option>" +
-    //              "<option value='restaurant'>restaurant</option>" +
-    //              "</select> </td></tr>" +
-    //              "<tr><td></td><td><input type='button' value='Save & Close' onclick='saveData()'/></td></tr>";
-    // infowindow = new google.maps.InfoWindow({
-    //  content: html
-    // });
+
+
+
 
   $.get("map_process.php", function (data) {
     $(data).find("marker").each(function () {
@@ -62,7 +60,9 @@ function initialize() {
       //   content: 'Location found using HTML5.'
       });
 
+      resizeMap();
       map.setCenter(pos);
+
     }, function() {
       handleNoGeolocation(true);
     });
@@ -70,6 +70,8 @@ function initialize() {
     // Browser doesn't support Geolocation
     handleNoGeolocation(false);
   }
+
+
 
   // google.maps.event.addListener(map, "click", function(event) {
   //     marker = new google.maps.Marker({
@@ -111,7 +113,6 @@ function initialize() {
     //   create_marker(pos, 'New Marker', EditForm, true, true, true, "icons/pin_green.png");
     // }
   });
-
 
   // updateLocation();
 }
@@ -239,6 +240,7 @@ function updateLocation(location) {
     var newPos = new google.maps.LatLng(position.coords.latitude,
                                          position.coords.longitude);
     markerMain.setPosition(newPos);
+    google.maps.event.trigger(map, 'resize');
 
       // position: pos,
       // map: map,
@@ -299,5 +301,13 @@ function handleNoGeolocation(errorFlag) {
   var infowindow = new google.maps.InfoWindow(options);
   map.setCenter(options.position);
 }
+
+function resizeMap() {
+  google.maps.event.trigger(map, 'resize');
+  map.setCenter(pos);
+  console.log('resized');
+
+}
+
 
 google.maps.event.addDomListener(window, 'load', initialize);
