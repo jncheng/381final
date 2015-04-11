@@ -1,0 +1,237 @@
+/*border, font-size, line-height, margin, padding, text-align, position, width, height*/
+
+body {
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 3%;
+  padding:3%;
+  text-align: center;
+
+}
+p{
+  text-align: center;
+}
+
+
+code {
+  border: 1px solid #ddd;
+  border-radius: 0px;
+  font-size: 12px;
+  margin: 0 2px;
+  padding: 0px 0px;
+
+}
+
+h1, h2, h3, h4 {
+  margin: 0 0 15px;
+  padding: 0;
+}
+
+h1 {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  text-align: center;
+  font-size: 1em;
+}
+
+h2 {
+  margin-top: 15%;
+  border-bottom: 1px solid #7B4A12;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+button:active{
+  border: 1px solid black;
+}
+button{
+  margin: 0px;
+
+}
+
+#next{
+  margin-top: 100px;
+  border-top: 1px solid #7B4A12;
+}
+
+.answers{
+    font-size: 20px;
+    margin:1px;
+}
+
+
+.nextq{
+  width: 30%;
+
+}
+
+#left-col{
+  position: absolute;
+  left: ;
+  top:73%;
+  width: 42%;
+}
+
+#right-col{
+
+  position: absolute;
+  left: 50%;
+  margin-left: 3%;
+  top:73%;
+  width: 42%;
+  
+}
+
+#lastQ{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 30px;
+
+  
+}
+
+#homeQ{
+  padding-top: 12px;
+  padding-bottom: 10px;
+  font-size: 20px;
+
+  
+}
+
+
+#nextQ_5{
+  padding-top: 12px;
+  padding-bottom: 10px;
+  font-size: 20px;
+
+  
+}
+
+#nextQ_4{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 30px;
+
+  
+}
+
+#nextQ_3{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 30px;
+
+  
+}
+
+#nextQ_2{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 30px;
+
+  
+}
+
+#nextQ_1{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 30px;
+}
+
+#body-div{
+   
+  background-size: 100%;
+  opacity: 50%;
+  background-repeat: no-repeat;
+  padding: 0%;
+  margin: 0%;
+  height:100vh;
+  }
+
+#body{
+  margin-top: 20%;
+  height:100vh;
+
+}
+#header-div{
+  padding: 0%;
+  margin: 0%;
+  
+}
+
+#progress{
+  top:0%;
+  left: 0%;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+#homeHeader{
+  top:0%;
+  left: 0%;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+#imageDiv {
+  margin-left: -65%;
+  margin-right: 10%;
+  margin-top: 0%;
+  position: absolute;
+  width: 130%;
+  height: 50%;
+  opacity: 10%;
+/*  background-image: url("../images/frontpage_earthquakesmall.png");
+*/  background-repeat: no-repeat;
+  background-size: 100%;
+
+
+}
+
+.progressImg{
+  width: 10px;
+  margin: 1%;
+
+
+}
+
+#footer{
+  position: absolute;
+  top:90%;
+  width: 100%;
+}
+
+#p2 {
+  margin-bottom: 15%;
+}
+
+
+
+#bigone1{
+  font-size: 20px;
+  text-align: center;
+}
+
+
+#bigone2{
+  line-height: 10%;
+  font-size: 200%;
+  font-weight: bolder;
+  text-align: center;
+}
+
+#bigone3{
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+
+}
