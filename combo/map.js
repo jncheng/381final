@@ -175,7 +175,7 @@ function create_marker(MapPos, MapTitle, MapDesc,  InfoOpenDefault, DragAble, Re
     if(InfoOpenDefault) //whether info window should be open by default
     {
     } else{
-            infowindow.open(map,marker);
+            // infowindow.open(map,marker);
 
     }
 
@@ -253,7 +253,7 @@ function updateLocation(location) {
       //   content: 'Location found using HTML5.'
       // });
 
-      // map.setCenter(newPos);
+      map.setCenter(newPos);
 
       console.log('Hello');
   });
@@ -304,7 +304,7 @@ function handleNoGeolocation(errorFlag) {
 
 function resizeMap() {
   google.maps.event.trigger(map, 'resize');
-  map.setCenter(pos);
+  // map.setCenter(pos);
   console.log('resized');
 
 }
